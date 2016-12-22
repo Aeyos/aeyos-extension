@@ -399,7 +399,7 @@ if (typeof window === 'object') {
      * @return {Date}        The date object
      */
     Date.prototype.addDays = function(days) {
-      return new Date(this.getTime() + Date.daysToMS(days));
+      return  new Date(this.setDate(this.getDate() + days));
     }
     /**
      * Adds weeks to the date and returns a date Object
@@ -408,7 +408,7 @@ if (typeof window === 'object') {
      * @return {Date}         The date object
      */
     Date.prototype.addWeeks = function(weeks) {
-      return new Date(this.getTime() + Date.weeksToMS(weeks));
+      return  new Date(this.setDate(this.getDate() + (weeks * 7)));
     }
     /**
      * Adds milliseconds to the date and returns a date Object
@@ -453,7 +453,7 @@ if (typeof window === 'object') {
      * @return {Date}        The date object
      */
     Date.prototype.subDays = function(days) {
-      return new Date(this.getTime() - Date.daysToMS(days));
+      return new Date(this.setDate(this.getDate() - days));
     }
     /**
      * Adds weeks to the date and returns a date Object
@@ -462,7 +462,7 @@ if (typeof window === 'object') {
      * @return {Date}         The date object
      */
     Date.prototype.subWeeks = function(weeks) {
-      return new Date(this.getTime() - Date.weeksToMS(weeks));
+      return new Date(this.setDate(this.getDate() - (weeks * 7)));
     }
   }
 

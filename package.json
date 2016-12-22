@@ -1,6 +1,6 @@
 {
   "name": "aeyos-extension",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "A small library to expand upon the javascript defined-types",
   "main": "index.js",
   "scripts": {
